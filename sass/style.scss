@@ -1,0 +1,475 @@
+@import "reset";
+$color_cian:#00adf2;
+$color_gray:#aaabb0;
+$color_foot1: #41596B;
+$color_foot2: #283741;
+$color_rec2: #f6d700;
+$color_rec3: #fe955b;
+$color_rec4: #f27231;
+@mixin display(){
+  @media screen and(max-width: 700px){
+    display: none;
+  }
+}
+@mixin crear-producto($color, $color-oscuro){
+    width: 22%;
+    height: 300px;
+    background: white;
+    margin-top: -10%;
+    margin-left: 2%;
+    display: inline-block;
+    .sup{
+      width: 100%;
+      text-align: center;
+      padding-top: 15%;
+      box-sizing: border-box;
+      h1{
+        font-size: 15px;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 15px;
+        display: inline-block;
+      }
+      h2{
+        font-size: 30px;
+        display: inline-block;
+      }
+      h3{
+        font-size: 13px;
+        color: $color_gray;
+      }
+    }
+    .inf{
+      width: 100%;
+      border-top: 1px solid $color_gray;
+      margin-top: 30px;
+      .one{
+        width: 100%;
+        margin: 10px 0;
+        h1{
+          display: inline-block;
+          font-size: 10px;
+          color: $color_gray;
+        }
+        h2{
+          display: inline-block;
+          color:$color-oscuro;
+          font-size: 10px;
+          float: right;
+        }
+      }
+      button{
+        width: 100%;
+        height: 22px;
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        border: 0;
+        background: $color;
+        font-size: 10px;
+      }
+    }
+  }
+.container{
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  @media screen and (max-width: 700px){
+    width: 85%;
+  }
+}
+
+header{
+  width: 100%;
+  height: 40px;
+    img{
+      width: 60px;
+      height: 30px;
+      display: inline-block;
+      box-sizing: border-box;
+      padding-top: 8px;
+    }
+    article{
+      text-align: center;
+      display: inline-block;
+      float: right;
+        a{
+          @media screen and (max-width: 700px){
+            font-size: 13px;
+          }
+          display: inline-block;
+          font-size: 15px;
+          box-sizing: border-box;
+          padding-top: 10px;
+          color: $color_gray;
+          text-decoration: none;
+          &:hover{
+            color: black;
+          }
+        }
+    }
+}
+.section1{
+  width: 100%;
+  height: 400px;
+  background-image: url("icons/header_ok.jpg");
+  background-position: center;
+  background-size: cover;
+  @media screen and (max-width: 700px){
+    background-image: url("icons/media.png");
+    background-position: center;
+    background-size: cover;
+  }
+    .text{
+      color: white;
+      box-sizing: border-box;
+      padding-top: 20%;
+      @include display();
+      h1{
+        font-size: 20px;
+        text-align: left;
+        margin: 15px 0;
+      }
+      p{
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+    article{
+      width: 100%;
+      height: 80px;
+      margin-top: 14%;
+      @include display();
+        input{
+          width: 80%;
+          height: 50px;
+          border: none;
+        }
+        button{
+          width: 20%;
+          height: 50px;
+          float: right;
+          background: $color_cian;
+          color: white;
+          border: none;
+        }
+      }
+    }
+.section2{
+  width: 100%;
+  height: 470px;
+  display: flex;
+  flex-direction: row;
+  @include display();
+  article{
+    display: inline-block;
+    width: 20%;
+    height: 200px;
+    margin-top: 7%;
+    margin-left: 1%;
+    margin-right: 1%;
+      .up{
+        margin: auto;
+        width: 40%;
+        height: 70px;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .down{
+        text-align: center;
+        h1 {
+          margin: 10px 0;
+        }
+        p{
+          font-size: 15px;
+        }
+      }
+  }
+  .spa{
+    height: 200px;
+    width: 3%;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    span{
+      display: inline-block;
+      font-size: 25px;
+      color: $color_gray;
+    }
+  }
+  .text2{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin: 0;
+    span{
+      text-align: center;
+      font-size: 30px;
+      color:$color_cian;
+    }
+    h1{
+      font-size: 30px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    p{
+      text-align: center;
+      font-size: 20px;
+      color:$color_gray;
+    }
+  }
+}
+.section3{
+  width: 100%;
+  height: 500px;
+  .none{
+    display: none;
+  }
+  @media screen and (max-width: 700px){
+    height: 350px;
+    .none{
+      display: block;
+      h1{
+        text-align: center;
+        font-size: 26px;
+        margin: 30px 0 15px 0;
+      }
+      p{
+        text-align: center;
+        font-size: 15px;
+        color: $color_gray;
+      }
+      form{
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        .prim{
+          margin-top: 20px;
+          margin-right: 10px;
+          width: 50%;
+          height: 100%;
+          display: inline-block;
+          input{
+            width: 100%;
+            height: 20%;
+            margin: 8px 0;
+            &:focus{
+              border: 2px solid $color_cian;
+            }
+          }
+        }
+        .seg{
+          vertical-align: top;
+          height: 76%;
+          width: 45%;
+          display: inline-block;
+          margin-top: 30px;
+          input{
+            width: 100%;
+            height: 100%;;
+            &:focus{
+              border: 2px solid $color_cian;
+            }
+          }
+        }
+        button{
+          margin-top: 15px;
+          border: none;
+          border-radius: 3px;
+          text-align: center;
+          background: $color_cian;
+          color: white;
+          width: 100px;
+          height: 30px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .izq{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    @include display();
+    .uno{
+      width: 100%;
+      height: 20%;
+      vertical-align: top;
+      .textizq{
+        display: inline-block;
+        width: 70%;
+        text-align: right;
+        h1{
+          font-size: 15px;
+          margin: 10px 0;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+      .imgizq{
+        width: 22%;
+        display: inline-block;
+        img{
+          width: 100%;
+          height: 35px;
+        }
+      }
+    }
+  }
+  .imgcenter{
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+    margin-right: 1%;
+    @include display();
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .der{
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    vertical-align: top;
+    @include display();
+    .uno{
+      width: 100%;
+      height: 20%;
+    .imgder{
+      display: inline-block;
+      width: 22%;
+      img{
+        width: 100%;
+        height: 35px;
+      }
+    }
+    .textder{
+      display: inline-block;
+      width: 70%;
+      text-align: left;
+      h1{
+        font-size: 15px;
+        margin: 10px 0;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+}
+}
+}
+.section4{
+  @include display();
+  .sup1{
+    width: 100%;
+    height: 400px;
+    background-image: url("icons/pricing-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    margin-top: -10%;
+    .text3{
+      width: 100%;
+      height: 100px;
+      box-sizing: border-box;
+      padding-top: 130px;
+    span{
+      color: $color_cian;
+      font-size: 30px;
+      text-align: center;
+    }
+    h1{
+      font-size: 30px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    p{
+      text-align: center;
+      font-size: 20px;
+      color:$color_gray;
+    }
+  }
+  }
+}
+#section5{
+  @include display();
+  width: 100%;
+  height: 300px;
+      .rectangulo1{
+          @include crear-producto($color_cian, $color_cian);
+      }
+      .rectangulo2{
+          @include crear-producto($color_cian, $color_rec2);
+      }
+      .rectangulo3{
+          @include crear-producto($color_cian, $color_rec3);
+      }
+      .rectangulo4{
+          @include crear-producto($color_cian, $color_rec4);
+      }
+}
+
+.section6{
+  width: 100%;
+  height: 100px;
+  background: $color_foot1;
+  .foot{
+    padding-top: 3%;
+    box-sizing: border-box;
+    text-align: center;
+    p{
+      color: white;
+      font-size: 20px;
+      @media screen and (max-width: 700px){
+        font-size: 15px;
+      }
+    }
+    a{
+      font-size: 25px;
+      color: $color_cian;
+      text-decoration: none;
+      @media screen and (max-width: 700px){
+        font-size: 20px;
+      }
+    }
+  }
+}
+footer{
+  width: 100%;
+height: 30px;
+background: $color_foot2;
+.divizq{
+  color: white;
+  font-size: 13px;
+  margin-top: 4px;
+  display: inline-block;
+}
+.divder{
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 4px;
+  float: right;
+  @media screen and (max-width: 700px){
+    font-size: 12px;
+  }
+  a{
+    display: inline-block;
+    margin-left: 6px;
+    color: white;
+    border: 0;
+    text-decoration: none;
+  }
+  span{
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+}
